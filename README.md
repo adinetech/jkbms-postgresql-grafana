@@ -1,7 +1,5 @@
 # Integrating JKBMS Data into PostgreSQL for Grafana Visualization
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
 ## Installation
 
 1. Install the mppsolar Python package with BLE and PostgreSQL support:
