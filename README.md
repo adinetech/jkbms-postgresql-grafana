@@ -1,14 +1,12 @@
-# Integrating JKBMS Data into PostgreSQL for Grafana Visualization
-
 ## Installation
 
-1. Install the mppsolar Python package with BLE and PostgreSQL support:
+1. Install the `mppsolar` Python package with BLE and PostgreSQL support:
 
     ```bash
     pip install mppsolar[ble,pgsql]
     ```
 
-2. If you encounter errors related to `bluepy`, install it and its dependencies:
+    If you encounter errors related to `bluepy`, install it and its dependencies:
 
     ```bash
     sudo pip3 install bluepy
@@ -21,6 +19,30 @@
     ```
 
     Afterward, run the first `pip install mppsolar[ble,pgsql]` command again.
+
+2. Install the PostgreSQL development library and `psycopg2`:
+
+    ```bash
+    sudo apt-get install libpq-dev
+    sudo pip3 install psycopg2
+    ```
+    Example: `export PATH=$PATH:/home/pi/.local/bin`
+
+3. Add the `mppsolar` directory to your PATH for convenient access by running the following command:
+
+    ```bash
+    export PATH=$PATH:/path/to/mppsolar
+    ```
+
+    Alternatively, to make the change persistent across sessions, add the above export command to your shell profile configuration file (e.g., `.bashrc` or `.zshrc`).
+
+    ```bash
+    echo 'export PATH=$PATH:/home/pi/.local/bin' >> ~/.bashrc   # For Bash
+    # or
+    echo 'export PATH=$PATH:/home/pi/.local/bin' >> ~/.zshrc    # For Zsh
+    ```
+
+    Then, run `source ~/.bashrc` (or `source ~/.zshrc`) or reopen your terminal.
 
 ## Database Setup
 
